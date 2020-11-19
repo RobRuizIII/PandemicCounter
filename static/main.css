@@ -1,0 +1,42 @@
+h1{text-align: center;}
+
+body{
+    background-color: black;
+}
+.content-section{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid #000744;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+
+.img-section{
+    background-color: black;
+    overflow: hidden;
+    padding: 5px 10px;
+    border: 2px solid #000744;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.arrow{
+    position: relative;
+    font-size: 32px;
+    text-align: center;
+    animation: bouncearrow 1s infinite;
+}
+
+@-webkit-keyframes bouncearrow{
+    0%{top: 0px;}
+    50%{top: 5px;}
+    100%{top: 0px;}
+}
+@keyframes bouncearrow{
+    0%{top: 0px;}
+    50%{top: 5px;}
+    100%{top: 0px;}
+}

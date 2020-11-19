@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type='text/css' href="{{url_for('static',filename='main.css')}}">
+
+    <title>Pandemic Counter</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+    
+
+</head>
+
+
+<body>
+
+    <script type="text/javascript">
+
+        $( window ).on( "load", function(){
+            var googleNewsUpdate;
+            var stringURL = '{{ news_url }}'.toString(); //Get newsurl with apikey from flask api
+            stringURL = stringURL.replace(/amp;/g,'') //string manipulation for newurl with apikey
+            displayUpdate(stringURL); //Call displayUpdate from main.js
+        });
+
+
+    </script>
+
+    <!--Basic html5 structure using bootstrap-->
+
+    <div class="row">
+        <div id="graphics-section" class="col-lg-6">
+            <div id="title-section" class="container content-section">
+                <h1>Covid-19 Pandemic<br> <small>Live Count & Content</small></h1>
+                <h2 id="total-stats">
+    
+                </h2>
+            </div>
+
+
+            <div id="news-section">
+    
+            </div>
+            
+        </div>
+
+        <div id="firstcolumn"class=col-lg-1.5>
+            
+        </div>
+
+        <div id="secondcolumn"class=col-lg-1.5>
+            
+        </div>
+
+        <div id="thirdcolumn"class=col-lg-1.5>
+            
+        </div>
+
+        <div id="fourthcolumn"class=col-lg-1.5>
+            
+        </div>
+    </div>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
